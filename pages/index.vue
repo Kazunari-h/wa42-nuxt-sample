@@ -33,7 +33,7 @@ export default {
         name: item.Name,
         description: item.description,
         thumbnail: item.photo.length
-          ? `https://www.master-7rqtwti-mq325chc5wubq.us-2.platformsh.site/${item.photo[0].url}`
+          ? `https://www.master-7rqtwti-mq325chc5wubq.us-2.platformsh.site${item.photo[0].url}`
           : "http://placehold.jp/400x300.png?text=No Image"
       };
     });
