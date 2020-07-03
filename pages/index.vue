@@ -2,16 +2,18 @@
   <div class="container">
     <div class="columns is-multiline">
       <div v-for="restaurant in restaurants" :key="restaurant.id" class="column is-4">
-        <div class="card">
-          <div class="card-image">
-            <figure class="image is-4by3">
-              <img :src="restaurant.thumbnail" />
-            </figure>
+        <nuxt-link :to="`/restaurant/${restaurant.id}`">
+          <div class="card">
+            <div class="card-image">
+              <figure class="image is-4by3">
+                <img :src="restaurant.thumbnail" />
+              </figure>
+            </div>
+            <div class="card-content">
+              <h1 class="title is-5">{{ restaurant.name }}</h1>
+            </div>
           </div>
-          <div class="card-content">
-            <h1 class="title is-5">{{ restaurant.name }}</h1>
-          </div>
-        </div>
+        </nuxt-link>
       </div>
     </div>
   </div>
